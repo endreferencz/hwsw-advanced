@@ -21,13 +21,13 @@ public class FileSorter {
 	}
 
 	private static void printNumbers(List<Long> lines) throws IOException {
-		StringBuilder result = new StringBuilder();
+		String result = "";
 		for (long l : lines) {
-		    result.append(l);
-		    result.append("\n");
+		    result += l;
+		    result += "\n";
 		}
 		try (FileWriter fw = new FileWriter("sorted.txt")) {
-			fw.append(result.toString());
+			fw.append(result);
 			fw.close();
 		}
 	}
