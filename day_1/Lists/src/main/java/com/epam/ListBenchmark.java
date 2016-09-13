@@ -13,7 +13,7 @@ import com.epam.measure.ArrayListRemoveBenchmark;
 import com.epam.measure.LinkedListAddBenchmark;
 import com.epam.measure.LinkedListRemoveBenchmark;
 
-public class SortBenchmark {
+public class ListBenchmark {
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
                 .include(ArrayListAddBenchmark.class.getSimpleName())
