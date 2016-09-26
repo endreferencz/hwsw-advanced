@@ -1,8 +1,4 @@
-package com.epam.training;
-
-import com.epam.training.crypt.CaesarEncryptor;
-import com.epam.training.crypt.EasyEncryptor;
-import com.epam.training.crypt.Encryptor;
+package com.epam.training.crypt;
 
 public class Application {
 

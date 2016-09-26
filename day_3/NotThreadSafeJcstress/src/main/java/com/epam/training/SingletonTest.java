@@ -8,6 +8,12 @@ import org.openjdk.jcstress.annotations.Outcome;
 import org.openjdk.jcstress.annotations.State;
 import org.openjdk.jcstress.infra.results.IntResult1;
 
+
+/**
+ *
+ * Run with: java -XX:-UseCompressedOops -jar target/jcstress.jar -v
+ *
+ */
 public class SingletonTest {
 	@JCStressTest
 	@Description("Tests the unsafe singleton pattern.")
