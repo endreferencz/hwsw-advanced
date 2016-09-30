@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class CalculatorTest {
 
-    private Calculator calculator;
+    private Calculator calculator = new Calculator();
 
     @Test
     public void testAdd() {
