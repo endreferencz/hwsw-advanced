@@ -5,6 +5,17 @@
 	<artifactId>FirstCi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<distributionManagement>
+        <repository>
+            <id>myMavenRepo.write</id>
+            <url>https://mymavenrepo.com/repo/7WccQWQEyKLkDaOXJ8wh/</url>
+        </repository>
+        <snapshotRepository>
+            <id>myMavenRepo.write</id>
+            <url>https://mymavenrepo.com/repo/7WccQWQEyKLkDaOXJ8wh/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
