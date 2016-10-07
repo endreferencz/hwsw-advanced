@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.epam.training.shop.store.Store">
+		<constructor-arg>
+			<bean class="com.epam.training.shop.price.DiscountPriceCalculator">
+				<constructor-arg>
+					<value>#{ ${ratio} + 1}</value>
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg>
+			<bean class="com.epam.training.shop.data.MemoryDataStore" />
+		</constructor-arg>
+	</bean>
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:values.properties" />
+	</bean>
+
+</beans>
