@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+  <head>
+    <title>View All</title>
+  </head>
+  <body>
+    <div layout:fragment="content">
+        <h1>Users</h1>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                	<th>Id</th>
+                	<th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                    <th>Admin</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${users.empty}">
+                    <td colspan="3">No users</td>
+                  </tr>
+                  <tr th:each="user : ${users}">
+                  	<td th:text="${user.id}">Id</td>
+                  	<td th:text="${user.firstName}">First name</td>
+                    <td th:text="${user.lastName}">Last name</td>
+                    <td th:text="${user.email}">Email address</td>
+                    <td th:text="${user.admin}">Administrator</td>
+                    <td th:text="${user.password}">Password</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </body>
+</html>
